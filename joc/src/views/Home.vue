@@ -3,6 +3,12 @@
     <div class="d-flex flex-row justify-content-center flex-wrap tablero">
       <Button v-for="button in arrayButton" :key="button.id" :button="button"></Button>
     </div>
+
+    <div v-if="gameOver">
+      <p>Gamer X: {{gameWinX}}</p>
+      <p>Gamer O: {{gameWinO}}</p>
+      <button class="btn btn-primary" @click="restart()">Restart</button>
+    </div>
   </div>
 </template>
 
@@ -16,7 +22,7 @@ export default {
     Button
   },
   computed:{
-    ...Vuex.mapState(['arrayButton'])
+    ...Vuex.mapState(['arrayButton', 'gameOver', 'gameWinX', 'gameWinO'])
   },
   methods: {
     marcar: function(val) {
@@ -25,7 +31,7 @@ export default {
             }
             
         },
-    ...Vuex.mapMutations(['marcarPC'])
+    ...Vuex.mapMutations(['marcarPC', 'restart'])
   }
 }
 </script>

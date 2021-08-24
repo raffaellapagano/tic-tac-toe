@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="btn" @click="marcarBoton(button.id); if(clickTimes<4){marcarPC()}">{{button.value}}</button>
+        <button id="" class="btn" :class="button.color" @click="marcarBoton(button.id); if(clickTimes<4){marcarPC()}; checkWinner()">{{button.value}}</button>
     </div>
 </template>
 
@@ -15,13 +15,7 @@ export default {
         ...Vuex.mapState(['arrayButton', 'clickTimes'])
     },
     methods: {
-        // marcar: function(val) {
-        //     if(this.bottonValue.value === ""){
-        //         this.bottonValue.value = val;
-        //     }
-            
-        // },
-        ...Vuex.mapMutations(['marcarBoton', 'marcarPC'])
+        ...Vuex.mapMutations(['marcarBoton', 'marcarPC', 'checkWinner'])
     }
 }
 
@@ -34,6 +28,7 @@ button{
     height: 100px;
     background-color: rgb(243, 239, 239);
     border: slategray solid 1px;
+    font-size: 30px;
 }
 
 button:hover{
