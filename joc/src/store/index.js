@@ -163,117 +163,117 @@ export default new Vuex.Store({
         }  
       state.clickTimes++;
     },
-    checkWinner(state){
-      if(state.arrayButton[0].value === state.arrayButton[1].value 
-        && state.arrayButton[1].value === state.arrayButton[2].value 
-        && state.arrayButton[2].value!=""){
+    checkWinner(state, simbolo){
+      if(state.arrayButton[0].value === simbolo 
+        && state.arrayButton[1].value === simbolo
+        && state.arrayButton[2].value === simbolo){
         state.arrayButton[0].color = "bg-warning";
         state.arrayButton[1].color = "bg-warning";
         state.arrayButton[2].color = "bg-warning";
         state.gameOver=true; 
         setTimeout(function() { 
-          if(state.arrayButton[0].value==="X"){
+          if(simbolo === "X"){
             state.gameWinX++
-          }else{
+          }else if (simbolo === "O"){
             state.gameWinO++
           }
         }, 100);
-      }else if(state.arrayButton[3].value === state.arrayButton[4].value 
-        && state.arrayButton[4].value === state.arrayButton[5].value 
-        && state.arrayButton[5].value!=""){
+      }else if(state.arrayButton[3].value === simbolo 
+        && state.arrayButton[4].value === simbolo 
+        && state.arrayButton[5].value === simbolo){
         state.arrayButton[3].color = "bg-warning";
         state.arrayButton[4].color = "bg-warning";
         state.arrayButton[5].color = "bg-warning";
         state.gameOver=true; 
         setTimeout(function() {           
-          if(state.arrayButton[3].value==="X"){
+          if(simbolo === "X"){
             state.gameWinX++
-          }else{
+          }else if (simbolo === "O"){
             state.gameWinO++
           }
         }, 100);
-      }else if(state.arrayButton[6].value === state.arrayButton[7].value
-         && state.arrayButton[7].value === state.arrayButton[8].value 
-         && state.arrayButton[8].value!=""){
+      }else if(state.arrayButton[6].value === simbolo
+         && state.arrayButton[7].value === simbolo
+         && state.arrayButton[8].value === simbolo){
         state.arrayButton[6].color = "bg-warning";
         state.arrayButton[7].color = "bg-warning";
         state.arrayButton[8].color = "bg-warning";
         state.gameOver=true; 
-        setTimeout(function() {
-          if(state.arrayButton[6].value==="X"){
+        setTimeout(function() {           
+          if(simbolo === "X"){
             state.gameWinX++
-          }else{
+          }else if (simbolo === "O"){
             state.gameWinO++
           }
         }, 100);
-      }else if(state.arrayButton[0].value === state.arrayButton[3].value 
-        && state.arrayButton[3].value === state.arrayButton[6].value 
-        && state.arrayButton[6].value!=""){
+      }else if(state.arrayButton[0].value === simbolo
+        && state.arrayButton[3].value === simbolo
+        && state.arrayButton[6].value === simbolo){
         state.arrayButton[0].color = "bg-warning";
         state.arrayButton[3].color = "bg-warning";
         state.arrayButton[6].color = "bg-warning";
         state.gameOver=true; 
-        setTimeout(function() {
-          if(state.arrayButton[0].value==="X"){
-            state.gameWinX++;
-          }else{
-            state.gameWinO++;
+        setTimeout(function() {           
+          if(simbolo === "X"){
+            state.gameWinX++
+          }else if (simbolo === "O"){
+            state.gameWinO++
           }
         }, 100);
-      }else if(state.arrayButton[1].value === state.arrayButton[4].value 
-        && state.arrayButton[4].value === state.arrayButton[7].value 
-        && state.arrayButton[7].value!=""){
+      }else if(state.arrayButton[1].value === simbolo 
+        && state.arrayButton[4].value === simbolo 
+        && state.arrayButton[7].value === simbolo){
         state.arrayButton[1].color = "bg-warning";
         state.arrayButton[4].color = "bg-warning";
         state.arrayButton[7].color = "bg-warning";
         state.gameOver=true; 
-        setTimeout(function() { 
-          if(state.arrayButton[1].value==="X"){
+        setTimeout(function() {           
+          if(simbolo === "X"){
             state.gameWinX++
-          }else{
+          }else if (simbolo === "O"){
             state.gameWinO++
           }
         }, 100);
-      }else if(state.arrayButton[2].value === state.arrayButton[5].value 
-        && state.arrayButton[5].value === state.arrayButton[8].value 
-        && state.arrayButton[8].value!=""){
+      }else if(state.arrayButton[2].value === simbolo 
+        && state.arrayButton[5].value === simbolo
+        && state.arrayButton[8].value === simbolo){
         state.arrayButton[2].color = "bg-warning";
         state.arrayButton[5].color = "bg-warning";
         state.arrayButton[8].color = "bg-warning";
         state.gameOver=true; 
-        setTimeout(function() { 
-          if(state.arrayButton[2].value==="X"){
+        setTimeout(function() {           
+          if(simbolo === "X"){
             state.gameWinX++
-          }else{
+          }else if (simbolo === "O"){
             state.gameWinO++
           }
         }, 100);
-      }else if(state.arrayButton[0].value === state.arrayButton[4].value 
-        && state.arrayButton[4].value === state.arrayButton[8].value 
-        && state.arrayButton[8].value!=""){
+      }else if(state.arrayButton[0].value === simbolo 
+        && state.arrayButton[4].value === simbolo
+        && state.arrayButton[8].value === simbolo){
         state.arrayButton[0].color = "bg-warning";
         state.arrayButton[4].color = "bg-warning";
         state.arrayButton[8].color = "bg-warning";
         state.gameOver=true; 
-        setTimeout(function() { 
-          if(state.arrayButton[0].value==="X"){
-            state.gameWinX++;
-          }else{
-            state.gameWinO++;
+        setTimeout(function() {           
+          if(simbolo === "X"){
+            state.gameWinX++
+          }else if (simbolo === "O"){
+            state.gameWinO++
           }
         }, 100);
-      }else if(state.arrayButton[2].value === state.arrayButton[4].value 
-        && state.arrayButton[4].value === state.arrayButton[6].value 
-        && state.arrayButton[6].value!=""){
+      }else if(state.arrayButton[2].value === simbolo
+        && state.arrayButton[4].value === simbolo
+        && state.arrayButton[6].value === simbolo){
         state.arrayButton[2].color = "bg-warning";
         state.arrayButton[4].color = "bg-warning";
         state.arrayButton[6].color = "bg-warning";
         state.gameOver=true; 
-        setTimeout(function() { 
-          if(state.arrayButton[2].value==="X"){
-            state.gameWinX++;
-          }else{
-            state.gameWinO++;
+        setTimeout(function() {           
+          if(simbolo === "X"){
+            state.gameWinX++
+          }else if (simbolo === "O"){
+            state.gameWinO++
           }
         }, 100);
       }

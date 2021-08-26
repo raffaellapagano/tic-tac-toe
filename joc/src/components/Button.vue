@@ -2,11 +2,14 @@
     <div>
         <button id="" class="btn" :class="button.color" 
         @click="
+            if(!gameOver){
             marcarBoton(button.id); 
-            if(clickTimes<4 && gameOver===false){
+            checkWinner('X')
+            };
+            if(clickTimes<4 && !gameOver){
                 marcarPC()
             };
-            checkWinner()"
+            checkWinner('O')"
             >
         {{button.value}}
         </button>
