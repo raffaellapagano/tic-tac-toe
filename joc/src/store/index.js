@@ -63,62 +63,62 @@ export default new Vuex.Store({
       let valor = "O";
       let verify = false;
       if(state.arrayButton[4].value === ""){
-        setTimeout(function() { state.arrayButton[4].value = valor;}, 500);
+        state.arrayButton[4].value = valor;
       }else{
       do {
         id = getRandomArbitrary(1, 10);
         switch (id) {
           case 0:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-            setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+            state.arrayButton[id].value = valor;
             verify = true;
             }
             break;
           case 1:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-              setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+              state.arrayButton[id].value = valor;
               verify = true;
             }
             break;
           case 2:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-              setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+              state.arrayButton[id].value = valor;
               verify = true;
             }
             break;
           case 3:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-              setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+              state.arrayButton[id].value = valor;
               verify = true;
             }
             break;
           case 4:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-              setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+              state.arrayButton[id].value = valor;
               verify = true;
             }
             break;
           case 5:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-              setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+              state.arrayButton[id].value = valor;
               verify = true;
             }
             break;
           case 6:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-              setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+              state.arrayButton[id].value = valor;
               verify = true;
             }
             break;
           case 7:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-              setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+              state.arrayButton[id].value = valor;
               verify = true;
             }
             break;
           case 8:
             if(state.arrayButton[id].value === "" && !state.gameOver){
-              setTimeout(function() { state.arrayButton[id].value = valor;}, 500);
+              state.arrayButton[id].value = valor;
               verify = true;
             }
             break;

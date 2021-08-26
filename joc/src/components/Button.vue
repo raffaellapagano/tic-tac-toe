@@ -3,7 +3,7 @@
         <button id="" class="btn" :class="button.color" 
         @click="
             marcarBoton(button.id); 
-            if(clickTimes<4 && !gameOver){
+            if(clickTimes<4 && gameOver===false){
                 marcarPC()
             };
             checkWinner()"
