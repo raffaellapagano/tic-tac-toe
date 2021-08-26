@@ -1,6 +1,15 @@
 <template>
     <div>
-        <button id="" class="btn" :class="button.color" @click="marcarBoton(button.id); if(clickTimes<4){marcarPC()}; checkWinner()">{{button.value}}</button>
+        <button id="" class="btn" :class="button.color" 
+        @click="
+            marcarBoton(button.id); 
+            if(clickTimes<4 && !gameOver){
+                marcarPC()
+            };
+            checkWinner()"
+            >
+        {{button.value}}
+        </button>
     </div>
 </template>
 
@@ -8,15 +17,23 @@
 import Vuex from 'vuex'
 
 export default {
+    data(){
+        return{
+            gameOverAqui: true
+        }
+    },
     props: {
         button: Object
     },
     computed:{
-        ...Vuex.mapState(['arrayButton', 'clickTimes'])
+        ...Vuex.mapState(['arrayButton', 'clickTimes', 'gameOver'])
     },
     methods: {
-        ...Vuex.mapMutations(['marcarBoton', 'marcarPC', 'checkWinner'])
+        ...Vuex.mapMutations(['marcarBoton', 'marcarPC', 'checkWinner']),
     }
+    // updated(){
+    //     this.checkWinner();
+    // }
 }
 
 

@@ -4,10 +4,14 @@
       <Button v-for="button in arrayButton" :key="button.id" :button="button"></Button>
     </div>
 
-    <div v-if="gameOver">
+    <div class="p-3">
+      <button class="btn btn-primary" @click="restart()">Restart</button>
+      <hr>
+    </div>
+
+    <div>
       <p>Gamer X: {{gameWinX}}</p>
       <p>Gamer O: {{gameWinO}}</p>
-      <button class="btn btn-primary" @click="restart()">Restart</button>
     </div>
   </div>
 </template>
@@ -21,7 +25,7 @@ export default {
   components: {
     Button
   },
-  computed:{
+  computed: {
     ...Vuex.mapState(['arrayButton', 'gameOver', 'gameWinX', 'gameWinO'])
   },
   methods: {
@@ -31,7 +35,7 @@ export default {
             }
             
         },
-    ...Vuex.mapMutations(['marcarPC', 'restart'])
+    ...Vuex.mapMutations(['marcarPC', 'restart', 'checkWinner'])
   }
 }
 </script>
